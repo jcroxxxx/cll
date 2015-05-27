@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chief Lake Lodge</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" media="screen" rel="stylesheet" />
+		<link href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" media="screen" rel="stylesheet" />
+		<link href="css/app.css" media="screen" rel="stylesheet" />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js" />
+        <script src="js/bootstrap.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+            $(document).ready(function() {cllInit();});
+        </script>
+    </head>
+    <body>
+        
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                        <img src="imgs/chief.gif" />
+                </div>
+                <h1>Chief Lake Lodge</h1>
+            </div>
+
+            <div class="navbar navbar-default">
+                <ul id="cll_nav" class="nav navbar-nav navbar-right">
+                    <li class="active"><a>Home</a></li>
+                    <li><a>Resort</a></li>
+                    <li><a>Bar/Restaurant</a></li>
+                    <li><a>Cottages</a></li>
+                    <li><a>Events</a></li>
+                    <li><a>Gallery</a></li>
+                    <li><a>Directions</a></li>
+                </ul>
+            </div>
+        </div>
+		
+		<div id="cll_home" class="cll_page">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="cll_home_desc">
+							Come vacation with us on Wisconsin's largest unspoiled 
+							wilderness lake. The "Big Chip" offers over 17,000 acres, mostly
+							undeveloped with hundreds of islands and quiet bays providing 
+							shelter and seclusion to fishermen and boaters alike.
+						</div>
+						<div class="cll_home_desc">
+							While partaking this unique Northwoods peaceful experience, 
+							enjoy the majestic eagles, alluring Loon calls, and rare Blue
+							Heron with their nests.
+						</div>
+						<div class="cll_home_desc">
+							<div class="cll_home_desc_header">&#126; Spring &#126;</div>
+							Fish for Muskie, Walleye, Crappie, Panfish, Perch, Northern Pike, and small and Largemouth Bass.
+							Fishing opener begins with avid fishermen filling their quotas of prized Walleyes and Crappies. 
+							During the spring, fishermen  looking for a challenge,can fish for Musky and small and large mouth Bass. 
+							Several fishing tournaments to enter. 
+						</div>
+						<div class="cll_home_desc">
+							<div class="cll_home_desc_header">&#126; Summer &#126;</div>
+							In the summer enjoy boating with friends and family while seeing northwoods animals in their natural habitat. 
+							The Chippewa Flowage is known for a variety of summer sports such as swimming, water skiing, tubing, etc. 
+							Many events also occur in the city of Hayward during summer months such as the Musky Festival and Carnival, 
+							Lumberjack  Championships, the Native American Pow-Wow, Fat Tire race, Arts and Crafts, and many more. 
+						</div>
+						<div class="cll_home_desc">
+							<div class="cll_home_desc_header">&#126; Fall &#126;</div>
+							In the fall, enjoy the bountiful colors of trees along the shoreline. 
+							Plenty of wildlife to view while hiking or hunting the national forest and state lands. 
+							Fall fishing is at its best.
+						</div>
+						<div class="cll_home_desc">
+							<div class="cll_home_desc_header">&#126; Winter &#126;</div>
+							Winter activities include snowmobiling, cross country skiing, and ice fishing. 
+							There are many stops along the 700 miles of groomed trails which allow you to do T-shirt runs 
+							and pin tours at the many stops along your snow covered ride. 
+							Events such as the "World Class" Birkebeiner cross country ski race and snowmobile 
+							radar runs take place in the Winter months. 
+						</div>
+					</div>
+					<div class="col-sm-4"><img src="imgs/sign_2011.jpg" /></div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="cll_resort" class="cll_page">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-3">
+						<h2>Grounds</h2>
+						<ul>
+							<li>Playground</li>
+							<li>Sun deck</li>
+							<li>Small sandy beach</li>
+							<li>Picnic tables</li>
+							<li>Manicured lawn</li>
+							<li>Fish cleaning house</li>
+						</ul>
+					</div>
+					
+					<div class="col-sm-6">
+						<div id="img_resort" class="cll_image">
+						</div>
+					</div>
+					
+					<div class="col-sm-3">
+						<h2>Dockside</h2>
+						<ul>
+							<li>Live Bait</li>
+							<li>Power</li>
+							<li>Gas and Oil</li>
+							<li>Boat Rentals</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="cll_bar_restaurant" class="cll_page">
+			<div class="container">
+				
+				<div class="row">
+					<div class="col-sm-4">
+						<ul>
+							<li>Full Bar</li>
+							<li>Casual Dining</li>
+							<li>Breakfast, Lunch, and Dinner (<a>View Menu</a>)</li>
+							<li>Daily Specials</li>
+							<li>Free Wifi</li>
+							<li>Air Conditioned</li>
+							<li>Seasonal Outdoor Seating</li>
+							<li>Satellite TV</li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div id="img_restaurant" class="cll_image">
+							<img src="imgs/bar_restaurant/bar1.jpg" alt="Chief Lake Lodge Bar" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="cll_page_footer">
+					<div class="row">
+						<div class="col-sm-3">
+							<div id="cll_menu_download">
+								<a>
+									<img src="imgs/site/pdf-icon.jpg" 
+										 style="width:10%"
+										 title="Download Menu"
+										 alt="Download Menu" />
+									Download Menu
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="cll_menu" class="cll_page">
+			<div class="container">
+				<div class="row">
+					<img src="imgs/menu/page1.png" alt="Menu Page 1" />
+					<img src="imgs/menu/page2.png" alt="Menu Page 2" />
+					<img src="imgs/menu/page3.png" alt="Menu Page 3" />
+					<img src="imgs/menu/page4.png" alt="Menu Page 4" />
+					<img src="imgs/menu/page5.png" alt="Menu Page 5" />
+				</div>
+			</div>
+		</div>
+		
+		<div id="cll_cottages" class="cll_page">
+			<div class='container'>
+				<div class="row">
+					<div class='col-sm-2'>
+						<select id="cabin_selector">
+							<option value="1">Cabin #1</option>
+							<option value="2">Cabin #2</option>
+							<option value="3">Cabin #3</option>
+							<option value="4">Cabin #4</option>
+							<option value="5">Cabin #5</option>
+							<option value="6">Cabin #6</option>
+							<option value="7">Cabin #7</option>
+							<option value="8">Cabin #8</option>
+							<option value="9">Cabin #9</option>
+							<option value="10">Cabin #10</option>
+						</select>
+						<br />
+						<br />
+						<ul>
+							<li>On the lake</li>
+							<li>1 Bedroom</li>
+							<li>Queen size bed</li>
+							<li>Satellite TV</li>
+							<li>Air Conditioning</li>
+					</div>
+					<div class="col-sm-4">
+						<img src="imgs/cabins/cabin1/01_cover.JPG" width="350" height="231" />
+					</div>
+				</div>
+				<div class="row">
+					<table id="cabin_rates_display" cellpadding="8">
+						<tr>
+							<th>Occupants</th>
+							<th>Deposit</th>
+							<th>Spring</th>
+							<th>Summer</th>
+							<th>Fall</th>
+							<th>Winter</th>
+							<th>Daily</th>
+							<th>Winter Daily</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div id="cll_footer">
+			<div class="container">
+				<div class="row">
+					<div>Chief Lake Lodge</div>
+					<div>7444 N. Pats Landing Rd</div>
+					<div>Hayward, WI 54843</div>
+					<div><a href="mailto:4seasons@chieflakelodge.com">4seasons@chieflakelodge.com</a></div>
+					<div>715-945-2221</div>
+				</div>
+			</div>
+		</div>
+
+    </body>
+</html>
