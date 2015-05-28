@@ -1,0 +1,3 @@
+.cottage_rate_label, .cottage_descrip_label {float: left; width: 25%;}
+.cottage_rate_field {padding-bottom: 8px;}
+#cabin_title {text-align: center; font-size: 125%;}
