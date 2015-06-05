@@ -93,7 +93,7 @@
 					
 					<div class="col-sm-3">
 						<h2>Grounds</h2>
-						<ul>
+						<ul class="cll-side-med">
 							<li>Playground</li>
 							<li>Sun deck</li>
 							<li>Small sandy beach</li>
@@ -101,21 +101,19 @@
 							<li>Manicured lawn</li>
 							<li>Fish cleaning house</li>
 						</ul>
-					</div>
-					
-					<div class="col-sm-6">
-						<div id="img_resort" class="cll_image">
-						</div>
-					</div>
-					
-					<div class="col-sm-3">
+						
 						<h2>Dockside</h2>
-						<ul>
+						<ul class="cll-side-med">
 							<li>Live Bait</li>
 							<li>Power</li>
 							<li>Gas and Oil</li>
 							<li>Boat Rentals</li>
 						</ul>
+					</div>
+					
+					<div class="col-sm-6">
+						<div id="img_resort" class="cll_image">
+						</div>
 					</div>
 					
 				</div>
@@ -128,10 +126,10 @@
 				
 				<div class="row">
 					<div class="col-sm-4">
-						<ul>
+						<ul class="cll-side-med">
 							<li>Full Bar</li>
 							<li>Casual Dining</li>
-							<li>Breakfast, Lunch, and Dinner (<a>View Menu</a>)</li>
+							<li>Breakfast, Lunch, and Dinner (<a id="cll_menu_view">View Menu</a>)</li>
 							<li>Daily Specials</li>
 							<li>Free Wifi</li>
 							<li>Air Conditioned</li>
@@ -141,23 +139,6 @@
 					</div>
 					<div class="col-sm-6">
 						<div id="img_restaurant" class="cll_image">
-							<img src="imgs/bar_restaurant/bar1.jpg" alt="Chief Lake Lodge Bar" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="cll_page_footer">
-					<div class="row">
-						<div class="col-sm-3">
-							<div id="cll_menu_download">
-								<a>
-									<img src="imgs/site/pdf-icon.jpg" 
-										 style="width:10%"
-										 title="Download Menu"
-										 alt="Download Menu" />
-									Download Menu
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -165,60 +146,53 @@
 			</div>
 		</div>
 		
-		<div id="cll_menu" class="cll_page">
-			<div class="container">
-				<div class="row">
-					<img src="imgs/menu/page1.png" alt="Menu Page 1" />
-					<img src="imgs/menu/page2.png" alt="Menu Page 2" />
-					<img src="imgs/menu/page3.png" alt="Menu Page 3" />
-					<img src="imgs/menu/page4.png" alt="Menu Page 4" />
-					<img src="imgs/menu/page5.png" alt="Menu Page 5" />
-				</div>
-			</div>
+		<div id="cll_menu">
+			<img src="imgs/menu/page1.png" alt="Menu Page 1"  />
+			<img src="imgs/menu/page2.png" alt="Menu Page 2"  />
+			<img src="imgs/menu/page3.png" alt="Menu Page 3"  />
+			<img src="imgs/menu/page4.png" alt="Menu Page 4"  />
+			<img src="imgs/menu/page5.png" alt="Menu Page 5"  />
 		</div>
 		
 		<div id="cll_cottages" class="cll_page">
 			<div class='container'>
 				<div class="row">
-					<div class='col-sm-2'>
-						<select id="cabin_selector">
-							<option value="1">Cabin #1</option>
-							<option value="2">Cabin #2</option>
-							<option value="3">Cabin #3</option>
-							<option value="4">Cabin #4</option>
-							<option value="5">Cabin #5</option>
-							<option value="6">Cabin #6</option>
-							<option value="7">Cabin #7</option>
-							<option value="8">Cabin #8</option>
-							<option value="9">Cabin #9</option>
-							<option value="10">Cabin #10</option>
-						</select>
-						<br />
-						<br />
-						<ul>
-							<li>On the lake</li>
-							<li>1 Bedroom</li>
-							<li>Queen size bed</li>
-							<li>Satellite TV</li>
-							<li>Air Conditioning</li>
+					<div class="col-sm-8">
+						<div id="img_cabin" class="cll_image">
+						</div>
 					</div>
-					<div class="col-sm-4">
-						<img src="imgs/cabins/cabin1/01_cover.JPG" width="350" height="231" />
+					<div id="cll_cabin_descrip_container" class="col-sm-3">
 					</div>
 				</div>
-				<div class="row">
-					<table id="cabin_rates_display" cellpadding="8">
-						<tr>
-							<th>Occupants</th>
-							<th>Deposit</th>
-							<th>Spring</th>
-							<th>Summer</th>
-							<th>Fall</th>
-							<th>Winter</th>
-							<th>Daily</th>
-							<th>Winter Daily</th>
-						</tr>
-					</table>
+				<div id="cabin_rates_container" class="row">
+					<div class="col-sm-8">
+						<table id="cabin_rates_display" cellpadding="8">
+							<tr>
+								<th>
+									<select id="cabin_selector">
+										<option value="1">Cabin #1</option>
+										<option value="2">Cabin #2</option>
+										<option value="3">Cabin #3</option>
+										<option value="4">Cabin #4</option>
+										<option value="5">Cabin #5</option>
+										<option value="6">Cabin #6</option>
+										<option value="7">Cabin #7</option>
+										<option value="8">Cabin #8</option>
+										<option value="9">Cabin #9</option>
+										<option value="10">Cabin #10</option>
+									</select>
+								</th>
+								<th>Occupants</th>
+								<th>Deposit</th>
+								<th>Spring</th>
+								<th>Summer</th>
+								<th>Fall</th>
+								<th>Winter</th>
+								<th>Daily</th>
+								<th>Winter Daily</th>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -226,6 +200,7 @@
 		<div id="cll_footer">
 			<div class="container">
 				<div class="row">
+					<hr />
 					<div>Chief Lake Lodge</div>
 					<div>7444 N. Pats Landing Rd</div>
 					<div>Hayward, WI 54843</div>

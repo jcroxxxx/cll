@@ -46,5 +46,19 @@ class ChiefLakeLodgeAPI extends APIWrapper {
 		}
 		
 	}
+	
+	
+	protected function cottages() {
+		
+		$obj = new CottageRates();
+		
+		if($this->method == "GET") {
+			
+			$response = $obj->getCottages();
+			return $response;
+			
+		}
+		
+	}
     
 }

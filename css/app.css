@@ -38,3 +38,15 @@ iframe {
 	font-size: 90%;}
 
 .cll_image img {width: 90%;}
+#cll_menu_download img {width: 5%}
+
+.cll-side-med li {
+	padding: 3px;
+	font-size: 110%;
+}
+
+#cabin_rates_container {margin-top: 20px;}
+
+.cll_admin_label {float: left; width: 20%}
+.cll_admin_container {margin-top: 2em;}
+#cll_nav li {font-weight: bold; font-size: 110%}
