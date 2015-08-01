@@ -22,7 +22,7 @@
 }
 
 .cll_home_desc {margin: 10px 6px;}
-#cll_welcome_pic img {max-width: 98%; padding-top: 25px;}
+#cll_welcome_pic img {max-width: 98%; padding-top: 10px; height: 625px;}
 
 .cll_home_desc .cll_home_desc_header {
 	text-align: center; 
@@ -40,7 +40,7 @@ iframe {
 
 .cll_image img {
 	display: block;
-	max-width: 90%;
+	max-width: 98%;
 	max-height: 500px;}
 
 #cll_menu_download img {width: 5%}
@@ -55,3 +55,40 @@ iframe {
 .cll_admin_label {float: left; width: 20%}
 .cll_admin_container {margin-top: 2em;}
 #cll_nav li {font-weight: bold; font-size: 110%}
+
+#map-canvas {
+	height: 100%;
+    margin: 0px;
+    padding: 0px}
+
+#panel {
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	margin-left: -180px;
+	z-index: 5;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+  }
+
+
+
+#control {
+  background: #fff;
+  padding: 5px;
+  font-size: 14px;
+  font-family: Arial;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+}
+
+  #map-canvas {
+	height: 800px;
+	margin: 0;
+  }
+
+  #directions-panel {
+	float: right;
+	width: auto;
+  }

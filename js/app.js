@@ -2,6 +2,11 @@ var cabinImages;
 var cycleContainer = false;
 var cycleMethod;
 var cabinRates;
+var map = false;
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+
+$.support.cors = true;
 
 /**
  * 
@@ -11,9 +16,9 @@ function cllInit() {
    $(".cll_page:not(:first)").hide();
 	bindNav();
 	loadImages();
-	//loadRates();
 	loadCottages();
     bindMenuView();
+	
 }
 
 
@@ -196,8 +201,14 @@ function pageSelector(pageid) {
 			cycleContainer = "img_restaurant";
 			break;
 		case "cottages":
+			$("#cabin_selector").val("1");
 			cycleContainer = "img_cabin";
 			setImages("img_cabin", cabinImages["1"]);
+			break;
+		case "directions":
+			cycleContainer = false;
+			//updateMapDirections();
+			initializeMap();
 			break;
 		default:
 			cycleContainer = false;
@@ -227,7 +238,7 @@ function cycleImages() {
 	if(cycleImgPos === $("#"+cycleContainer).find("img").length) cycleImgPos = 0;
 	$("#"+cycleContainer+" img:eq("+cycleImgPos+")").show();
 	
-	cycleMethod = setTimeout("cycleImages()", 3000);
+	cycleMethod = setTimeout("cycleImages()", 4000);
 	
 }
 
@@ -254,10 +265,62 @@ function bindMenuView() {
 	
 }
 
+function initializeMap() {
+	directionsDisplay = new google.maps.DirectionsRenderer();
 
+	var mapOptions = {
+	  zoom: 6,
+	  center: new google.maps.LatLng(45.904398, -91.300665)
+	};
 
-function loadEvents() {
+	var map = new google.maps.Map(document.getElementById('map-canvas'),
+		mapOptions);
+	directionsDisplay.setMap(map);
+	directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+//	var control = document.getElementById('control');
+//	control.style.display = 'block';
+//	map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 	
 }
 
 
+function calcRoute() {
+	
+	var start = getFormattedStartAddress();
+	var end = "7444 N Pats Landing Road, Hayward, WI";
+	var request = {
+	  origin: start,
+	  destination: end,
+	  travelMode: google.maps.TravelMode.DRIVING,
+	  provideRouteAlternatives: true
+	};
+	directionsService.route(request, function(response, status) {
+	  if (status == google.maps.DirectionsStatus.OK) {
+		directionsDisplay.setDirections(response);
+	  }
+	});
+	
+}
+
+
+function getFormattedStartAddress() {
+
+	var addr = "";
+
+	$("#addr_container").find(".addr_input").each(function() {
+
+		if($(this).val().length > 0) {
+			addr+= $(this).val() + ",";
+		}
+
+	});
+
+	if(addr.length === 0) {
+		alert("Invalid address");
+		return false;
+	} 
+
+	return addr.substr(0, addr.length-1);
+
+}

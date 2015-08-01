@@ -7,8 +7,9 @@
         <link href="css/bootstrap.css" media="screen" rel="stylesheet" />
 		<link href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" media="screen" rel="stylesheet" />
 		<link href="css/app.css" media="screen" rel="stylesheet" />
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 		<script src="js/jquery.js"></script>
-		<script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js" />
+		<script src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/app.js"></script>
         <script>
@@ -33,8 +34,6 @@
                     <li><a>Resort</a></li>
                     <li><a>Bar/Restaurant</a></li>
                     <li><a>Cottages</a></li>
-                    <li><a>Events</a></li>
-                    <li><a>Gallery</a></li>
                     <li><a>Directions</a></li>
                 </ul>
             </div>
@@ -159,7 +158,7 @@
 		<div id="cll_cottages" class="cll_page">
 			<div class='container'>
 				<div class="row">
-					<div class="col-sm-8">
+					<div class="col-sm-9">
 						<div id="img_cabin" class="cll_image">
 						</div>
 					</div>
@@ -199,10 +198,88 @@
 			</div>
 		</div>
 		
+		<div id="cll_directions" class="cll_page">
+			<div class="container">
+					<div id="addr_container">
+						<label for="street">Street:</label>
+						<input type="text" id="street" class="addr_input" />
+
+						<label for="city">City:</label>
+						<input type="text" id="city" class="addr_input" />
+
+						<label for="region">State:</label>
+						<select id="region" class="addr_input">
+							<option value="">Select State...</option>
+							<option value="Alabama">Alabama</option>
+							<option value="Alaska">Alaska</option>
+							<option value="Arizona">Arizona</option>
+							<option value="Arkansas">Arkansas</option>
+							<option value="California">California</option>
+							<option value="Colorado">Colorado</option>
+							<option value="Connecticut">Connecticut</option>
+							<option value="Delaware">Delaware</option>
+							<option value="District of Columbia">District of Columbia</option>
+							<option value="Florida">Florida</option>
+							<option value="Georgia">Georgia</option>
+							<option value="Hawaii">Hawaii</option>
+							<option value="Idaho">Idaho</option>
+							<option value="Illinois">Illinois</option>
+							<option value="Indiana">Indiana</option>
+							<option value="Iowa">Iowa</option>
+							<option value="Kansas">Kansas</option>
+							<option value="Kentucky">Kentucky</option>
+							<option value="Louisiana">Louisiana</option>
+							<option value="Maine">Maine</option>
+							<option value="Maryland">Maryland</option>
+							<option value="Massachusetts">Massachusetts</option>
+							<option value="Michigan">Michigan</option>
+							<option value="Minnesota">Minnesota</option>
+							<option value="Mississippi">Mississippi</option>
+							<option value="Missouri">Missouri</option>
+							<option value="Montana">Montana</option>
+							<option value="Nebraska">Nebraska</option>
+							<option value="Nevada">Nevada</option>
+							<option value="New Hampshire">New Hampshire</option>
+							<option value="New Jersey">New Jersey</option>
+							<option value="New Mexico">New Mexico</option>
+							<option value="New York">New York</option>
+							<option value="North Carolina">North Carolina</option>
+							<option value="North Dakota">North Dakota</option>
+							<option value="Ohio">Ohio</option>
+							<option value="Oklahoma">Oklahoma</option>
+							<option value="Oregon">Oregon</option>
+							<option value="Pennsylvania">Pennsylvania</option>
+							<option value="Rhode Island">Rhode Island</option>
+							<option value="South Carolina">South Carolina</option>
+							<option value="South Dakota">South Dakota</option>
+							<option value="Tennessee">Tennessee</option>
+							<option value="Texas">Texas</option>
+							<option value="Utah">Utah</option>
+							<option value="Vermont">Vermont</option>
+							<option value="Virgin Islands">Virgin Islands</option>
+							<option value="Virginia">Virginia</option>
+							<option value="Washington">Washington</option>
+							<option value="West Virginia">West Virginia</option>
+							<option value="Wisconsin">Wisconsin</option>
+							<option value="Wyoming">Wyoming</option>
+						</select>
+
+						<label for="zip">Zip:</label>
+						<input type="text" id="zip" class="addr_input" />
+
+						<input type="button" value="search" onclick="calcRoute()" />
+					</div>
+					<div style='overflow:hidden;'>
+					<div id="directions-panel"></div>
+					<div id="map-canvas"></div>
+				</div>
+			</div>
+		</div>
+		
 		<div id="cll_footer">
 			<div class="container">
+				<hr />
 				<div class="row">
-					<hr />
 					<div>Chief Lake Lodge</div>
 					<div>7444 N. Pats Landing Rd</div>
 					<div>Hayward, WI 54843</div>
@@ -211,6 +288,6 @@
 				</div>
 			</div>
 		</div>
-
+		
     </body>
 </html>
